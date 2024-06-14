@@ -1,6 +1,6 @@
 ## WRITEUP DE LA MAQUINA BREACKMYSSH DE DOCKERLABS EN ESPAÑOL
 
-Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abiertos y que servicios y caraterisiticas muestran.
+Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abiertos y que servicios y caraterísticas muestran.
 
 ```
 └─$ nmap -sC -sV -p- -n --min-rate 5000 172.17.0.2 -oN outputscan.txt
