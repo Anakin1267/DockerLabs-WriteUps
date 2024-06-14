@@ -43,7 +43,7 @@ Hacemos un ataque de fuerza bruta al servicio SSH con la herramienta Hydra, dond
 ```
 "-l root" Indica qué nombre de usuario va a usar en el ataque, en este caso buscamos a root.
 <br>
-"-P /home/kali/Desktop/rockyou.txt" Especifica la wordlist de contraseñas que va a usar para probar el ataque de fuerza bruta, cada uno pone la ruta donde se encuentre su fichero wordlist
+"-P /home/kali/Desktop/rockyou.txt" Especifica la wordlist de contraseñas que va a usar para probar el ataque de fuerza bruta, cada uno pone la ruta donde se encuentre su fichero wordlist.
 <br>
 "ssh://172.17.0.2/" Especifica el protocolo y la dirección del objetivo del ataque. En este caso, se está atacando el servicio SSH (Secure Shell) en la dirección IP 172.17.0.2
 <br>
@@ -57,7 +57,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-06-14 11:46:
 [STATUS] 55.00 tries/min, 55 tries in 00:01h, 14344344 to do in 4346:47h, 5 active
 [22][ssh] host: 172.17.0.2   login: root   password: estrella
 ```
-Vemos que para el usuario "root" ha encontrado la contraseña "estrella", probamos a hacer una conexión con SSH e introducimos la contraseña "estrella"
+Vemos que para el usuario "root" ha encontrado la contraseña "estrella", probamos a hacer una conexión con SSH e introducimos la contraseña "estrella".
 ```
 └─$ ssh root@172.17.0.2 
 ```
