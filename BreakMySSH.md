@@ -67,6 +67,6 @@ root
 ```
 <br>
 
-<div style="text-align: center;">
+
 Somos root, estamos dentro. Gracias.
-</div>                                                   
+                                                
