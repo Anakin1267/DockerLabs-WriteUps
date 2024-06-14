@@ -3,7 +3,7 @@
 Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abiertos y que servicios y caraterisiticas muestran.
 
 ```
-└─$ nmap -sC -sV -p- -n --min-rate 5000 172.17.0.2 -oN outputsacn.txt
+└─$ nmap -sC -sV -p- -n --min-rate 5000 172.17.0.2 -oN outputscan.txt
 ```
 "-sC" Muestra la version del servicio del pureto abierto.
 <br>
@@ -17,7 +17,7 @@ Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abie
 <br>
 "172.17.0.2" Es la dirección ip de la máquina víctima
 <br>
-"-oN" Sirve para que te copie el rsultado del escaneo en el fichero que tu le indiques (no hay que crearlo antes, lo crea solo).
+"-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tu le indiques (no hay que crearlo antes, lo crea solo).
 
 ```                  
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-14 11:09 EDT
