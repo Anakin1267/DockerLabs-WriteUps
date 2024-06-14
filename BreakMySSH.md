@@ -5,9 +5,9 @@ Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abie
 ```
 └─$ nmap -sC -sV -p- -n --min-rate 5000 172.17.0.2 -oN outputscan.txt
 ```
-"-sC" Muestra la version del servicio del pureto abierto.
+"-sC" Muestra la versión del servicio del puerto abierto.
 <br>
-"-sV" Ejecuta scripts propios de nmap que entre otras cosas descubren información detallada sobre los servicios.
+"-sV" Ejecuta scripts propios de Nmap que, entre otras cosas, descubren información detallada sobre los servicios.
 <br>
 "-p-" Escanea todos los 65535 puertos TCP.
 <br>
@@ -15,9 +15,9 @@ Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abie
 <br>
 "--min-rate 5000" Ajusta la tasa mínima de envío de paquetes a 5000 paquetes por segundo, acelerando el escaneo.
 <br>
-"172.17.0.2" Es la dirección ip de la máquina víctima
+"172.17.0.2" Es la dirección IP de la máquina víctima.
 <br>
-"-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tu le indiques (no hay que crearlo antes, lo crea solo).
+"-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tú le indiques (no hay que crearlo antes, lo crea solo).
 
 ```                  
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-14 11:09 EDT
@@ -35,13 +35,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 1.60 seconds
 
 ```
-Observamos el puerto 22, que es del servicio ssh, abierto. Al ser esta una maquina victima muy sencilla, en el siguiente paso podemos permitirnos ya intentar ser "root", lo haremos de la siguiente forma.
+Observamos el puerto 22, que es del servicio SSH, abierto. Al ser esta una máquina víctima muy sencilla, en el siguiente paso podemos permitirnos ya intentar ser "root", lo haremos de la siguiente forma.
 <br><br><br>
-Hacemos un ataque de fuerza bruta al servicio ssh con la herramienta hydra, donde pondremos la wordlist "rockyou.txt" que incluye aproximadamente un millon de contraseñas comunes.
+Hacemos un ataque de fuerza bruta al servicio SSH con la herramienta Hydra, donde pondremos la wordlist "rockyou.txt" que incluye aproximadamente un millón de contraseñas comunes.
 ```sh
 └─$ hydra -l root -P /home/kali/Desktop/rockyou.txt ssh://172.17.0.2/ -t 5
 ```
-"-l root" Indica que nombre de usuario va a usar en el ataque, en este caso buscamos a root.
+"-l root" Indica qué nombre de usuario va a usar en el ataque, en este caso buscamos a root.
 <br>
 "-P /home/kali/Desktop/rockyou.txt" Especifica la wordlist de contraseñas que va a usar para probar el ataque de fuerza bruta, cada uno pone la ruta donde se encuentre su fichero wordlist
 <br>
@@ -57,7 +57,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-06-14 11:46:
 [STATUS] 55.00 tries/min, 55 tries in 00:01h, 14344344 to do in 4346:47h, 5 active
 [22][ssh] host: 172.17.0.2   login: root   password: estrella
 ```
-Vemos que para el usuario "root" ha encontrado la contraseña "estrella", probamos a hacer una conexion con ssh e introducimos la contraseña "estrella"
+Vemos que para el usuario "root" ha encontrado la contraseña "estrella", probamos a hacer una conexión con SSH e introducimos la contraseña "estrella"
 ```
 └─$ ssh root@172.17.0.2 
 ```
