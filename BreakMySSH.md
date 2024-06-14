@@ -17,7 +17,7 @@ Hacemos un escaneo de puertos con la herramienta Nmap para ver cuales estan abie
 <br>
 "172.17.0.2" Es la dirección IP de la máquina víctima.
 <br>
-"-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tú le indiques (no hay que crearlo antes, lo crea solo).
+"-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tú le indiques (no hay que crearlo antes, lo crea solo). Esto lo hago por si más tarde quiero volver a ver el escaneo pero no quiero tener que hacerlo de nuevo.
 
 ```                  
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-06-14 11:09 EDT
