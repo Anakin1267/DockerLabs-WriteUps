@@ -35,9 +35,7 @@ Nmap done: 1 IP address (1 host up) scanned in 6.48 seconds
 ```
 Observamos que el puerto 80 del servicio http esta abierto, por ello al ser el unico puerto abierto por lógica intentaremos escalar por ahí. En cualquier buscador ponemos la dirección ip, en este caso 172.17.0.2, nos muestra una pagina web donde se puede subir archivos:
 <br><br>
-![Foto de la pagina web](/fotos/upload.JPG)
-![upload](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/8206ef47-d953-4249-8299-602b767cd7ec)
-
+![pagina web upload](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/8206ef47-d953-4249-8299-602b767cd7ec)
 <br><br><br>
 Aqui se dispersa la cosa, ya que vamos a tirar por acceder a la máquina víctima subiendo un archivo php que contenga una reverse shell, para ello hay muchas formas, todas se parecen en ciertas cosas, pero en este caso la voy a hacer de una manera muy sencilla.
 <br>
@@ -84,11 +82,11 @@ Finished
 Observamos que nos saca un directorio que destaca, ya que encima muestra un enlace, hablamos del directorio "172.17.0.2/uploads/". Una vez llegados aqui volvemos al tema de la reverse shell, ahora si.
 Vamos a la pagina https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php y descargamos el archivo php, lo abrimos en la terminal con alguna herramientas de edicion de texto como nano. Hay dos lineas donde pone "CHANGE THIS" ahi deberias poner la ip de vuestra máquina anfitriona y el puerto:
 <br><br>
-![Foto del codigo de reverse shell](/fotos/resaltado.JPG)
+![Foto del codigo de reverse shell](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/93e2497c-8348-4a03-8ff0-9c37807ef8bb)
 <br><br>
 Subimos este archivo a la pagina víctima. <br>Para estar seguros de que se ha subido, con esta url  "172.17.0.2/uploads/" veremos que se encuentra el archivo almacenado:
 <br><br>
-![Foto de la pagina web](/fotos/dirupload.JPG)
+![direcotrio por fuzzing](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/5c766129-42b5-4bc2-a2b3-48d6d08996ad)
 <br><br>
 Antes de ejecutar la reverse shell, tenemos que ejecutar la herramienta netcat para ponernos en escucha, siempre hay que poner obviamente el mismo puerto que hemos puesto anteriormente en el archivo php que hemos editado:
 
