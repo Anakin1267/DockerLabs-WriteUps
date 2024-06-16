@@ -36,6 +36,8 @@ Nmap done: 1 IP address (1 host up) scanned in 6.48 seconds
 Observamos que el puerto 80 del servicio http esta abierto, por ello al ser el unico puerto abierto por lógica intentaremos escalar por ahí. En cualquier buscador ponemos la dirección ip, en este caso 172.17.0.2, nos muestra una pagina web donde se puede subir archivos:
 <br><br>
 ![Foto de la pagina web](/fotos/upload.JPG)
+![upload](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/8206ef47-d953-4249-8299-602b767cd7ec)
+
 <br><br><br>
 Aqui se dispersa la cosa, ya que vamos a tirar por acceder a la máquina víctima subiendo un archivo php que contenga una reverse shell, para ello hay muchas formas, todas se parecen en ciertas cosas, pero en este caso la voy a hacer de una manera muy sencilla.
 <br>
