@@ -39,7 +39,8 @@ Nmap done: 1 IP address (1 host up) scanned in 6.47 seconds
 ```
 Vemos que los puertos 22 y 80 estan abiertos (servicios ssh y http respectivamente). Vamos a ingresar la ip de la máquina víctima en cualquier navegador para observar que tenemos.
 <br><br>
-![Foto de la pagina web](/fotos/kinder.JPG)
+![Foto de la pagina web](https://github.com/1A2N6K7/DockerLabs-WriteUps/assets/94070438/fa394feb-c077-46ca-bf1e-7e7b3e52798a)
+der.JPG)
 Vemos que solo hay una imagen jpeg, se me ocurre descargarla y mediante alguna herramienta de OSINT podamos sacar datos importantes. Esto lo haremos con la herramienta exiftool:
 ```
 └─$ exiftool kinder.jpeg
