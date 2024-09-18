@@ -34,7 +34,8 @@ Nmap done: 1 IP address (1 host up) scanned in 13.19 seconds
 
 Observamos que los puertos 21, 22 y 80 de los servicios ftp, ssh, http respectivamente estan abiertos, vamos a tirar por observar la dirección IP en algún buscador ya que el servicio http esta abierto. Vemos la siguiente página:
 <br><br>
-![foto de la pagina web](/fotos/paginaweb.png)
+![foto de la pagina web](![paginaweb](https://github.com/user-attachments/assets/63946c0e-9f99-43b0-86e5-13bdaec9e64c)
+)
 <br><br>
 Mediante fuzzing web con la herramienta gobuster (hay más herramientas como wfuzz) vamos a buscar directorios ocultos en dicha página web. Ejecutamos:
 
@@ -78,11 +79,13 @@ Finished
 
 Viendo los directorios ocultos del sitio web, probamos a meter en la url http://172.17.0.2/backup/ y nos muestra otra pagina con fichero llamado "Backup.txt"
 <br><br>
-![foto del fichero backup.txt](/fotos/backup.png)
+![foto del fichero backup.txt](![backup](https://github.com/user-attachments/assets/10d75e0e-252f-40a6-a465-14bdf2f65887)
+)
 <br><br>
 Si pinchamos en el, nos muestra una línea de texto que dice llamarse "russoski" como usuario. En el otro directorio llamada "important" encontramos un fichero .md donde hay un escrito sobre una historia de hacking, algo interesante pero nada relevante para el writeup.
 <br><br>
-![foto que muestra el nombre de usuario](/fotos/usuario.png)
+![foto que muestra el nombre de usuario](![usuario](https://github.com/user-attachments/assets/a32a3fab-06af-4d01-95d3-6cfdd6335965)
+)
 <br><br>
 Sabiendo el nombre de usuario vamos a realizar un ataque de fuerza bruta con hydra al servicio ssh con nombre "russoski", usaremos la wordlits "rockyou.txt"
 <br>
