@@ -38,7 +38,7 @@ Nmap done: 1 IP address (1 host up) scanned in 6.58 seconds
 
 Vemos que el puerto 22 y 80 de los servicios ssh y http respectivamente estan abiertos. Empezaremos por ver que sitio web encontramos con la IP víctima (172.18.0.2):
 
-![alt text](/fotos/debian.png)
+![debian](https://github.com/user-attachments/assets/82918d95-2d7b-4b3b-9ae1-0b45d656d6f8)
 
 Vamos a optar por hacer un ataque de fuerza bruta mediante la herramienta gobuster. Lo que vamos a intentar es encontrar directorios o ficheros ocultos que nos den pistas.
 
@@ -80,7 +80,7 @@ Starting gobuster in directory enumeration mode
 
 Vemos algo sospechoso, "/secret.php" nos da a entender que ahí hay algo. En la URL junto al 172.18.0.2 escribimos ese fichero php y vemos esta página:
 
-![alt text](/fotos/mario.png)
+![mario](https://github.com/user-attachments/assets/47f32699-43fd-4125-9072-c091674cbf37)
 
 Al ser una máquina tan sencilla se entiende que ese tal Mario será el nombre de usuario al que a continuación intentaremos conectarnos mediante ssh, pero antes de eso necesitamos saber su contraseña. Lo haremos mediante fuerza bruta esta vez con la herramienta hydra:
 
