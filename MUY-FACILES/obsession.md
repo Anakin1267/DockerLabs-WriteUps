@@ -37,7 +37,7 @@ Observamos que los puertos 21, 22 y 80 de los servicios ftp, ssh, http respectiv
 ![foto de la pagina web](https://github.com/user-attachments/assets/63946c0e-9f99-43b0-86e5-13bdaec9e64c)
 )
 <br><br>
-Mediante fuzzing web con la herramienta gobuster (hay más herramientas como wfuzz) vamos a buscar directorios ocultos en dicha página web. Ejecutamos:
+Mediante fuerza bruta con la herramienta gobuster vamos a buscar directorios ocultos en dicha página web. Ejecutamos:
 
 ```shell
 └─$ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php
