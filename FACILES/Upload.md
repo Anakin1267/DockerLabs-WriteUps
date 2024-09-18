@@ -41,7 +41,7 @@ Aqui se dispersa la cosa, ya que vamos a tirar por acceder a la máquina víctim
 <br>
 Pero antes de comenzar con la reverse shell, hay que averiguar donde se encuentra y como se llama el directorio donde se alamecenan los archivos que subamos.
 <br>
-Para ello vamos a hacer fuzzing con la herramienta gobuster (se puede hacer igual con herramientas como wfuzz entre otras)
+Para ello vamos a hacer un ataque de fuerza con la herramienta gobuster. 
 ```
 └─$ gobuster dir -u http://172.17.0.2/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php
 ```
