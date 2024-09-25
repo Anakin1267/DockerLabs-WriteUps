@@ -39,11 +39,12 @@ Nmap done: 1 IP address (1 host up) scanned in 7.04 seconds
 
 Observamos que los puertos 22 y 80 de los servicios ssh, http respectivamente estan abiertos, vamos a tirar por observar la dirección IP en algún buscador ya que el servicio http esta abierto. Vemos la siguiente página:
 
-![Página en blanco](paginablanco.png)
+![paginablanco](https://github.com/user-attachments/assets/d879c2c7-b31c-4ad0-920f-a78598563320)
+
 
 Con un simple ```Control + u``` inspeccionamos a fondo el código fuente de la página. Esto es lo que vemos:
 
-![alt text](controlu.png)
+![controlu](https://github.com/user-attachments/assets/e2d44060-9bae-43d3-84e7-817766e7ee36)
 
 Ahora conocemos dos nombres de usuario y que Camilo debe tener un archivo "correo" por algun lado. Empezaremos por hacer un ataque de fuerza bruta de contraseñas mediante hydra con la wordlist rockyou.txt.
 
