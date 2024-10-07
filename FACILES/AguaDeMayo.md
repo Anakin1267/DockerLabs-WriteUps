@@ -40,7 +40,7 @@ Nmap done: 1 IP address (1 host up) scanned in 6.96 seconds
 
 Vemos que el puerto 22 y 80 de los servicios ssh y http respectivamente estan abiertos. Empezaremos por ver que sitio web encontramos con la IP víctima (172.17.0.2):
 
-![Pagina web](pagina.png)
+![pagina web](https://github.com/user-attachments/assets/6c91aa72-6b41-4795-bd48-5be16dc12001)
 
 Vemos que es una página web sencilla, como costrumbre reviso el código fuente con ```Ctrl + u```. Si no eres observador veras un código normal sin nada raro, peo cuando llegas a las últimas lineas vemos que todavía se puedo hacer mucho más scroll hacia abajo, y que vemos...?
 
@@ -90,7 +90,7 @@ Finished
 
 Tenemos un directorio oculto en la página llamado "images", lo ponemos en el navegador y vemos:
 
-![foto del directorio images](ssh.png)
+![Foto directorio images](https://github.com/user-attachments/assets/658bcb1b-7249-42ba-901d-ee6a24359f79)
 
 Probe a descargar los datos y buscar información en los metadatos pero nada, es mucho más simple. Teniendo el nombre de la foto, "agua_ssh.jpg" me dice que el usuario al que debo hacer ssh es "agua" y su contraseña debería ser "bebeaguaqueessano".
 
@@ -110,7 +110,7 @@ bettercap v2.32.0 (built for linux amd64 with go1.19.8) [type 'help' for a list 
 
 Si escribimos help nos sale una lista de comandos y cosas que podemos ejecutar, vemos que para ejecutar comandos por la shell hay que poner un ! delante del comando:
 
-![bettercap](bettercap.png)
+![bettercap](https://github.com/user-attachments/assets/7bcff637-0ac9-40de-9d86-17274705f825)
 
 Le vamos a dar al binario bash el permiso SUID (activar el bit SUID) y así poder ejecutar bash con los permisos de root sin serlo. Para ello escribimos ```chmod u+s /usr/bin/bash```;
 <br><br>
