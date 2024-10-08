@@ -39,7 +39,7 @@ Nmap done: 1 IP address (1 host up) scanned in 15.68 seconds
 
 Observamos que el puerto 22 y 80 (ssh y http respectivamente) estan abiertos, primero vamos a ver que página web encontramos con 172.17.0.2, vemos un login:
 
-![pagina login](login.png)
+![loginsql](https://github.com/user-attachments/assets/8d5f5080-24af-45a7-9c48-6dc7326d7e37)
 
 Probamos a intentar loguearnos con algun usuario o contraseña y nos dice "credenciales erroneas". Vamos a hacer un poco de SQL injection, para ello vamos a hacer una Inyección tautológica. Este tipo de ataque se aprovecha de una expresión condicional que siempre es verdadera, en este caso 1=1, lo que permite a un atacante acceder o manipular la base de datos de una aplicación.
 
@@ -62,7 +62,7 @@ SELECT * FROM usuarios WHERE usuario = '' OR 1=1 -- ' AND contraseña = '';
 ```
 Haciendo esa inyección tautológica conseguimos entrar, y observamos esta página:
 
-![conseguimos entrar](tauto.png)
+![entramossql](https://github.com/user-attachments/assets/a12b530b-9a69-4906-b666-11bd5cd679c9)
 
 Sabiendo el usuario (dylan) y la contraseña (KJSDFG789FGSDF78) podemos hacer la conexión ssh.
 
