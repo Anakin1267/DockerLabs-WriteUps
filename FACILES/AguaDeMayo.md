@@ -15,7 +15,7 @@ Hacemos un escaneo de puertos mediante la herramienta nmap, esto casi siempre es
 <br><br>
 "-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tú le indiques (no hay que crearlo antes, lo crea solo). Esto lo hago por si más tarde quiero volver a ver el escaneo pero no quiero tener que hacerlo de nuevo.
 
-En este caso no he utlizado ni "-p-", ni "-n", ni "--min-rate 5000" ya que para algo tan sencillo es más eficaz y rapido ejecutar un comando más corto.
+> <span style="color:lightblue;">En este caso no he utlizado ni "-p-", ni "-n", ni "--min-rate 5000" ya que para algo tan sencillo es más eficaz y rapido ejecutar un comando más corto.</span>
 
 ```
 ─$ nmap -sC -sV 172.17.0.2 -oN outputscan.txt
