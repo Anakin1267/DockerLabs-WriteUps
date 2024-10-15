@@ -15,7 +15,11 @@ Hacemos un escaneo de puertos mediante la herramienta nmap, esto casi siempre es
 <br><br>
 "-oN outputscan.txt" Sirve para que te copie el resultado del escaneo en el fichero que tú le indiques (no hay que crearlo antes, lo crea solo). Esto lo hago por si más tarde quiero volver a ver el escaneo pero no quiero tener que hacerlo de nuevo.
 
-> <span style="color:blue;">En este caso no he utlizado ni "-p-", ni "-n", ni "--min-rate 5000" ya que para algo tan sencillo es más eficaz y rapido ejecutar un comando más corto.</span>
+---
+
+> En este caso no he utlizado ni "-p-", ni "-n", ni "--min-rate 5000" ya que para algo tan sencillo es más eficaz y rapido ejecutar un comando más corto.
+
+---
 
 ```
 ─$ nmap -sC -sV 172.17.0.2 -oN outputscan.txt
@@ -98,7 +102,7 @@ Probe a descargar los datos y buscar información en los metadatos pero nada, es
 ssh agua@172.17.0.2
 ```
 
-Hacemos un ```Sudo -l``` para escalar privilegios, vemos que podemos ejecutar el binario bettercap. Lo ejecutamos mediante ```sudo /usr/bin/bettercap``` y nos sale:
+Hacemos un `Sudo -l` para escalar privilegios, vemos que podemos ejecutar el binario bettercap. Lo ejecutamos mediante `sudo /usr/bin/bettercap` y nos sale:
 
 ```
 agua@fb7a55388ca1:~$ sudo /usr/bin/bettercap 
@@ -132,4 +136,4 @@ bash-5.2# whoami
 root          
 ```
 
-Somos root, muchas gracias por seguir este writeup, nos vemos en la próxima!!
+Somos root, muchas gracias por seguir este writeup, nos vemos en la próxima!! 😊
