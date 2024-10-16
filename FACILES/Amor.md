@@ -36,6 +36,12 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 13.24 seconds
 ```
 
+<br>
+
+---
+
+<br>
+
 Vemos que el puerto 22 y 80 de los servicios ssh y http respectivamente estan abiertos. Empezaremos por ver que sitio web encontramos con la IP víctima (172.17.0.2):  
 
 ![paginaweb](https://github.com/user-attachments/assets/1604df72-0948-4028-b673-6cfac5fc49df)
@@ -43,6 +49,12 @@ Vemos que el puerto 22 y 80 de los servicios ssh y http respectivamente estan ab
 He usado gobuster para ver si había algún directorio o archivo oculto en el sitio web, pero no encontramos nada, solo un directorio `/javascript` al cual no podemos acceder porque no tenemos permisos.
 
 Siempre hay que observar a fondo la información que tenemos, en este caso la pagina web contiene mucho texto del cual sacamos nombres clave como `Carlota` y `Juan`, ya tenemos dos posibles víctimas para hacer una conexion ssh.
+
+<br>
+
+---
+
+<br>
 
 > Os adelanto que haciendo fuerza bruta solo encontramos la contraseña de carlota, lo digo para ahorraros tiempo.
 
